@@ -1,0 +1,12 @@
+<h2 class="text-center text-3xl sm:text-5xl font-extrabold tracking-tight mb-10">My Projects</h2>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+     <!--We render all our project cards, and send in the data from projects.ts one at a time.-->
+     @for(item of projectstack(); track item.id) {
+          <app-project-card [project]="item" />
+     } @empty { 
+      <!-- If no projects are found, we have an empty check that instead creates a paragraph explaining such -->
+      <p class="text-center text-xl font-bold" >No projects found...</p>
+    }
+</div>
+

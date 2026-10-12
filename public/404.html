@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Page Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+
+    .my-body-padding {
+        padding: 4rem 12rem 4rem 12rem; /* Example large-screen margin */
+    }
+       
+    @media (width < 1024px) {
+      .my-body-padding {
+        padding: 2rem 2rem 2rem 2rem;;
+      }
+    }
+
+    .btn {
+        margin-top: 1rem; 
+        background-color: #FFA51F; 
+        color: black; 
+        text-decoration: none; 
+        padding: 16px 16px;
+         border-radius: 6px;  
+         cursor: pointer;
+    }
+
+    .btn span {
+        display: inline-block;
+        transition: transform 0.2s ease, color ease 0.2s;
+    }
+    .btn:hover span {
+        transform: translateY(-3px);
+        color: white;
+    }
+
+
+
+
+  
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; background: white;}
+    div { background: #FF1F79; border: 0.5rem solid #FFA51F; border-radius: 2rem; box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.1); 
+          width: 100%; min-height: calc(100vh - 8rem); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;} 
+
+  </style>
+</head>
+<body class="my-body-padding">
+
+<div>
+    <h1 style="font-size: 2.5rem; font-weight: 8000; ">404 - Page Not Found</h1>
+    <p style="font-size: 1rem; font-weight: 500; ">The page you are looking for doesn't exist.</p>
+    <a class="btn" style="font-weight: 600;" href="/"><span>&#8617; Return to my Portfolio</span></a>
+</div> 
+</body>
+</html>

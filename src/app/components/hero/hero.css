@@ -1,0 +1,32 @@
+.my-h2-text {
+    color: var(--tertiary-color);
+}
+
+.my-button {
+    color: black;
+    font-weight: bold;
+}
+
+.my-button-cv {
+    background-color: var(--tertiary-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px var(--tertiary-color-dark);;
+}
+
+.my-download-buttons {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.my-download-buttons:hover {
+    background-color: white;
+    color: var(--secondary-color);
+}
+
+.my-button-work {
+    background-color: var(--primary-color);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px var(--primary-color-dark);
+}
+
+:host { 
+      display: block; /* Essential for mx-auto to work */
+    }

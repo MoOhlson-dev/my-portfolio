@@ -1,0 +1,12 @@
+<h2 class="text-center text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">Techstack</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+     <!--We render all our techskill cards, and send in the data from techstack.ts one at a time.-->
+    @for (item of techstack(); track item.id) {
+        <app-techskill-card [techskill]="item" />
+    } @empty {
+      <!-- If no techskills are found, we have an empty check that instead creates a paragraph explaining such -->
+      <p class="text-center text-xl font-bold" >No tech skill found...</p>
+    }
+</div>
+

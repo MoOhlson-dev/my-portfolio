@@ -1,0 +1,10 @@
+.my-footer{
+    min-height: 35vh;
+    background-color: var(--secondary-color);
+}
+
+.my-footer-border {
+    border-top-width: 2px;
+    border-color: var(--tertiary-color);
+}
+

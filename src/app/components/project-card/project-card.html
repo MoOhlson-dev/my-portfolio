@@ -1,0 +1,22 @@
+<div class="my-project-card col-span-1 group relative rounded-3xl overflow-hidden">
+
+    <div class="relative w-full aspect-video overflow-hidden">
+        <img 
+        [ngSrc]= "'/images/' + project().image"
+        fill
+        class="w-full h-full object-cover my-image-bot-border"
+        alt="Card Image"
+        />
+    </div>
+
+    <div class="p-4">
+        <h3 class="font-semibold text-lg">{{project().title}}</h3>
+        
+        <div class="flex items-center gap-1 mt-3">
+            <span class="h-1 w-1 rounded-full bg-black -mt-3"></span>
+            <p class="text-xs font-bold capitalize -mt-3 ">{{project().category}}</p>
+        </div>
+
+        <p class="text-sm mt-2">{{project().description}}</p>
+    </div>
+</div>

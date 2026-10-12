@@ -1,0 +1,36 @@
+<footer class="my-footer px-4 sm:px-8 lg:px-16 pt-16">
+  <div class="my-footer-border grid grid-cols-1 md:grid-cols-4 gap-12 pt-12">
+    <!-- Brand Section -->
+    <div class="col-span-1 md:col-span-2">
+      <span class="text-xl font-bold tracking-tight">M.o.Ohlson.dev</span>
+      <p class="mt-4 text-zinc-600 max-w-xs">
+        Broadly Educated Programmer with many talents.
+      </p>
+    </div>
+
+    <!-- Links to the various parts of the website -->
+    <div>
+      <h3 class="text-sm font-semibold uppercase tracking-wider">Sitemap</h3>
+      <ul class="mt-4 space-y-2">
+        <li><a class="hover:text-white transition-colors" [routerLink]="['/']" fragment="techstack" aria-label="Scroll to my Techstack on this webpage">Techstack</a></li>
+        <li><a class="hover:text-white transition-colors" [routerLink]="['/']" fragment="projects" aria-label="Scroll to my Projects on this webpage" >Projects</a></li>
+        <li><a class="flex gap-1 group" href="/docs/CV_Martin_Ohlson_Eng.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my CV in English">
+                <span class="transition-colors group-hover:text-white">View Resume</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 -2 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="transition-all group-hover:text-white group-hover:translate-y-0.5 translate-y-1">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                </svg>
+            </a>
+        </li>
+      </ul>
+    </div>
+
+  <app-contact></app-contact>
+  </div>
+
+  <!-- How i built it. -->
+  <div class="my-footer-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p class="text-sm text-zinc-500 italic">Built with Angular + Tailwind + AnalogJS (SSG)</p>
+    <p class="text-sm text-zinc-500">&copy;  {{ currentYear() }} Martin Ohlson.</p>
+  </div>
+</footer>

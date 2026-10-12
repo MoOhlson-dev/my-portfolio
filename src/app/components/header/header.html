@@ -1,0 +1,73 @@
+<header class="z-50 bg-white dark:bg-black my-header-blobs" >
+
+    <nav aria-label="Main Navigation" class="mx-auto px-4 sm:px-8 lg:px-16">
+    <div class="my-navbar flex justify-between items-center">
+      <!-- My Name -->
+      <div class="flex-shrink-0 flex items-center">
+        <a class="text-xl font-bold my-name tracking-tight" [routerLink]="['/']">
+          Martin Ohlson
+        </a>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="text-md hidden md:flex h-full items-stretch">
+        <a class="group h-full flex my-nav-btn" 
+         [routerLink]="['/']"
+         fragment="hero">
+          <span class="transition-transform group-hover:-translate-x-1">Home</span>
+        </a>
+        <a class="group h-full flex my-nav-btn" 
+         [routerLink]="['/']"
+         fragment="techstack">
+          <span class="transition-transform group-hover:-translate-x-1">Techstack</span>
+        </a>
+        <a class="group h-full flex my-nav-btn" 
+         [routerLink]="['/']"
+         fragment="projects">
+          <span class="transition-transform group-hover:-translate-x-1">Projects</span>
+        </a>
+        <a class="group h-full flex my-nav-btn"
+          [routerLink]="['/']"
+          fragment="contact">
+          <span class="transition-transform group-hover:-translate-x-1">Contact</span>
+        </a>
+      </div>
+    
+      <!-- Mobile Menu Button -->
+      <div class="relative md:hidden">
+        <button id="menuBtn"
+            (click)="toggleMenu($event)" 
+            class="relative z-70 my-mobile-menu-button p-1 rounded-md"
+            [attr.aria-expanded]="isNavMenuOpen()"
+            aria-label="Toggle Navigation menu">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            @if (!isNavMenuOpen()){            
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            } @else {
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            }
+          </svg>
+        </button>
+      
+
+      @if (isNavMenuOpen())
+      {
+        <!--Backdrop div that covers entire screen, signal keeps track and closes menu if this div is pressed.-->
+        <!--The Menu button above has a higher z-70, otherwise we get ghost clicking for the backdrop and menu button.-->
+        <div class="fixed inset-0 z-60" (click)="closeMenu()"></div>
+
+        <!--Dropdown menu-->
+        <div id="menuContainer" class="absolute right-0 z-70 font-bold my-dropdown-menu w-48 border rounded-md mt-2 py-2">
+            <a class="my-dropdown-buttons block px-4 py-2 hover:bg-gray-100" [routerLink]="['/']" fragment="hero" (click)="closeMenu()">Home</a>
+            <a class="my-dropdown-buttons block px-4 py-2 hover:bg-gray-100" [routerLink]="['/']" fragment="techstack" (click)="closeMenu()">Techstack</a>
+            <a class="my-dropdown-buttons block px-4 py-2 hover:bg-gray-100" [routerLink]="['/']" fragment="projects" (click)="closeMenu()">Projects</a>
+            <a class="my-dropdown-buttons block px-4 py-2 hover:bg-gray-100" [routerLink]="['/']" fragment="contact" (click)="closeMenu()">Contact</a>
+        </div>
+      }
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+

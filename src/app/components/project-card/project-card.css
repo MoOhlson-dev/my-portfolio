@@ -1,0 +1,12 @@
+ :host {
+  display: contents;
+}
+
+.my-project-card {
+    border: 0.2rem solid black;
+    color: black;
+}
+
+.my-image-bot-border {
+    border-bottom: 0.2rem solid black;
+}

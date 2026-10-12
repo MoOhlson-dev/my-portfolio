@@ -1,0 +1,12 @@
+section:last-of-type {
+  margin-bottom: 4rem;
+}
+
+.my-section {
+  background-color: var(--secondary-color);
+
+  /*Border*/
+  border: 0.5rem solid var(--tertiary-color);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.1);
+}

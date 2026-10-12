@@ -1,0 +1,68 @@
+    
+        <div class="grid grid-cols-1 lg:grid-cols-12 lg:gap-4 place-items-center lg:pl-8">
+          
+          <!-- 5. Content Column -->
+          <div class="max-w-2xl lg:max-w-none text-center lg:text-left lg:col-span-8">
+
+            <h1 class="text-3xl sm:text-7xl font-extrabold tracking-tight mb-2 sm:mb-6">Martin Ohlson</h1>
+            <h2 class="text-xl sm:text-5xl font-extrabold tracking-tight my-h2-text mb-2">A developer with a passion for complex systems</h2>
+            
+            <!--Buttons Column-->
+            <div class="flex flex-col sm:flex-row sm:items-stretch gap-4 justify-center lg:justify-start my-8">
+
+              <!--The Download CV Dual Buttons-->
+              <div class="group flex items-center justify-between gap-4 ps-4 pe-2 py-2 my-button my-button-cv rounded-2xl transition-all">
+                <div class="flex gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -2 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+                  class="transition-transform group-hover:-translate-y-1/6">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                  </svg>
+                  <span class="text-md sm:text-lg">Download my CV</span>
+                </div>
+              
+                <div class="flex items-center gap-1">
+              <!--The links-->
+                  <a class="px-2 sm:px-4 py-2 rounded-xl text-sm font-bold transition-all my-download-buttons shadow-md"
+                  href="/CV_Martin_Ohlson_Swe.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in Swedish">SV
+                  </a>
+
+                  <div class="w-[1px] h-4 bg-white dark:bg-slate-600 mx-0.5"></div>
+
+                  <a class="px-2 sm:px-4 py-2 rounded-xl text-sm font-bold transition-all my-download-buttons shadow-md"
+                  href="/CV_Martin_Ohlson_Eng.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in English">EN
+                  </a>
+                </div>
+              </div>
+
+              <a class="flex items-center text-md sm:text-lg justify-center px-4 py-2 my-button my-button-work rounded-2xl hover:scale-[1.02] active:scale-[0.98] transition-all"
+                [routerLink]="['/']" fragment="projects" aria-label="Scroll down to my Work on this webpage">
+                See My Work!
+              </a>
+
+            </div>
+
+            <!-- The introduction text -->
+            <div class="lg:border-l-4 lg:border-l-[var(--primary-color)] lg:pl-4 lg:py-1 text-slate-200 leading-relaxed text-sm sm:text-base font-bold">
+              <p>Hello! I am a developer that is currently spending time on my own projects while looking for work! I recieved my Bachelor's Degree in computer science in late 2024, And have since also earned a diploma for extension studies within system developement.</p>           
+              <p>After the extension studies I worked a few months with databases and system development.</p>           
+              <p>As a developer my approach is from the ground up, as I love getting to understand the underlying mechanics of systems. My curiosity and will for understanding always drives me to want to learn more. On this site you can see my techstack, as well as some of my projects!</p>           
+            </div>
+          </div>
+
+
+
+          <!--Image Column -->
+          <div class="mb-8 lg:mb-0 relative group order-first lg:order-none items-center lg:col-span-4">
+            <!-- Gradient Glow that becomes more visible when picture is hovered. -->
+            <div class="pt-1 absolute inset-0 bg-gradient-to-tr from-sky-500 to-cyan-300 rounded-2xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <!-- Its a meeeeee -->
+            <img
+              ngSrc="/images/picture_of_me.webp" 
+              priority
+              width="300" 
+              height="375"
+              class="relative rounded-4xl shadow-2xl max-w-[260px] sm:max-w-full object-cover"
+              alt="Picture of Martin Ohlson">
+          </div>
+
+        </div>

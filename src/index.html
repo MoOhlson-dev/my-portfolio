@@ -1,13 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+  <!-- Google Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Martin Ohlson",
+    "jobTitle": "System Developer",
+    "url": "https://yourusername.github.io/your-repo/",
+    "knowsAbout": ["Angular", "TypeScript", "Tailwind CSS", "System Development", "3D programming", "Relational Databases"],
+    "sameAs": [
+      "WIP",
+      "https://www.linkedin.com/in/martin-ohlson-74445931a/"
+    ]
+  }
+  </script>
+
   <meta charset="utf-8">
   <title>PortfolioWebsite</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Title & Description (placed here instead of app-routes since it is a single page appplication.)-->
+  <title>Martin Ohlson | Broadly educated programmer with many talents.</title>
+  <meta name="description" content="Portfolio of Martin Ohlson, Developer with a passion for complex systems." />
+
+  <!-- OpenGraph (Social Previews for LinkedIn, Facebook, Discord) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Martin Ohlson Portfolio" />
+  <meta property="og:title" content="Martin Ohlson | Developer with a passion for complex systems" />
+  <meta property="og:description" content="Portfolio of Martin ohlson Doe, broadly educated programmer with many talents." />
+  <!-- IMPORTANT: Must be an absolute URL for social cards to work -->
+  <!-- <meta property="og:url" content="https://yourusername.github.io/your-repo/" /> -->
+  <!-- <meta property="og:image" content="https://yourusername.github.io/your-repo/preview.png" /> -->
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
+    img-src 'self' data: https:;
+    connect-src 'self' https:;
+    ">
+
 </head>
-<body>
+<body class="dark:bg-slate-900">
   <app-root></app-root>
 </body>
 </html>

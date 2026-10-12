@@ -1,0 +1,50 @@
+<div
+    [class]="`my-techstack-pills col-span-1 h-full flex flex-col group relative overflow-hidden rounded-3xl p-6 transition-all shadow-xl/30 ${techskill().category}`">
+    <div class="flex items-center gap-4">
+        @if (techskill().iconName) {
+        <!--The icon if one exists-->
+        <img [src]="'/icons/' + techskill().iconName + '.svg'" [alt]="techskill().name"
+            [class]="'h-6 w-6 brightness-0 font-bold object-contain transition-transform ' + (techskill().customScale ?? 'scale-100')"
+            loading="lazy" decoding="async" />
+        } @else {
+        <!-- The replacement if no icon exists-->
+        <div class="h-6 w-6 border-2 rounded-md border-black flex items-center justify-center">
+            <span class="-mt-0.5 text-[15px] font-bold uppercase">{{ techskill().name.charAt(0) }}</span>
+        </div>
+        }
+        <h3 class="font-bold text-lg">{{techskill().name}}</h3>
+    </div>
+
+       <!-- Small Screen only Toggle Button -->
+    <button 
+        type="button"
+        (click)="isOpen.set(!isOpen())"
+        [attr.aria-expanded]="isOpen()"
+        aria-label="Toggle tech skill details"
+        class="sm:hidden absolute top-5 right-5 flex items-center justify-center w-8 h-8 rounded-full bg-black/15 hover:bg-black/30 active:scale-95 transition-all cursor-pointer select-none touch-manipulation">
+        <span class="pointer-events-none text-[9px] transition-transform duration-200 inline-block" [class.-rotate-90]="isOpen()">
+            &#x25C0;&#xFE0E;
+        </span> 
+    </button>
+    
+    <!-- Tailwind Collapse Area (Grid Collapse) On desktop (sm): always 1fr. On mobile: toggles between 0fr and 1fr-->
+    <div 
+        class="grid transition-[grid-template-rows] duration-300 ease-in-out sm:grid-rows-[1fr]"
+        [class]="isOpen() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+        
+        <!-- Inner wrapper required for CSS grid collapse animation -->
+        <div class="overflow-hidden pr-8 sm:pr-0">
+            <!-- Category -->
+            <div class="flex items-center gap-2 mb-2 pt-1">
+                <span class="h-1.5 w-1.5 rounded-full bg-black shrink-0"></span>
+                <p class="text-xs font-bold capitalize">{{ techskill().category }}</p>
+            </div>
+            
+            <hr class="h-0.5 bg-black/30 border-0 rounded-full">
+            
+            <!-- Text description -->
+            <p class="mt-2 text-xs leading-relaxed">{{ techskill().text }}</p>
+        </div>
+    </div>
+
+</div>

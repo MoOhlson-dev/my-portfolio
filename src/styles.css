@@ -1,3 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+:root {
+  --primary-color: #1FE9FF;
+  --secondary-color: #FF1F79;
+  --tertiary-color: #FFA51F;
+
+  --quaternary-color: #1FFFA5;
+  --quinary-color: #1F79FF;
+
+  --primary-color-dark: #15A3B2;
+  --secondary-color-dark: #B21554;
+  --tertiary-color-dark: #B27315;
+  
+  --navbar-height: 64px; /*OBS: The navbar height scrolling offset in (app.ts constructor) should also be adjusted if this changes!*/
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
