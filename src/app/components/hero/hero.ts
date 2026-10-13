@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import {RouterLink} from '@angular/router';
 
@@ -9,4 +9,6 @@ import {RouterLink} from '@angular/router';
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
-export class Hero {}
+export class Hero {
+   isLoaded = signal(false);
+}

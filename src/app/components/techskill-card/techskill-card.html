@@ -3,7 +3,7 @@
     <div class="flex items-center gap-4">
         @if (techskill().iconName) {
         <!--The icon if one exists-->
-        <img [src]="'/icons/' + techskill().iconName + '.svg'" [alt]="techskill().name"
+        <img [src]="'icons/' + techskill().iconName + '.svg'" [alt]="techskill().name"
             [class]="'h-6 w-6 brightness-0 font-bold object-contain transition-transform ' + (techskill().customScale ?? 'scale-100')"
             loading="lazy" decoding="async" />
         } @else {
@@ -28,9 +28,9 @@
     </button>
     
     <!-- Tailwind Collapse Area (Grid Collapse) On desktop (sm): always 1fr. On mobile: toggles between 0fr and 1fr-->
-    <div 
-        class="grid transition-[grid-template-rows] duration-300 ease-in-out sm:grid-rows-[1fr]"
-        [class]="isOpen() ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'">
+    <div class="grid transition-all duration-300 ease-in-out sm:grid-rows-[1fr]"
+        [class.grid-rows-[1fr]]="isOpen()"
+        [class.grid-rows-[0fr]]="!isOpen()">
         
         <!-- Inner wrapper required for CSS grid collapse animation -->
         <div class="overflow-hidden pr-8 sm:pr-0">

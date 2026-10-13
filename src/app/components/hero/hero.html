@@ -23,13 +23,13 @@
                 <div class="flex items-center gap-1">
               <!--The links-->
                   <a class="px-2 sm:px-4 py-2 rounded-xl text-sm font-bold transition-all my-download-buttons shadow-md"
-                  href="/CV_Martin_Ohlson_Swe.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in Swedish">SV
+                  href="docs/CV_Martin_Ohlson_Swe.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in Swedish">SV
                   </a>
 
                   <div class="w-[1px] h-4 bg-white dark:bg-slate-600 mx-0.5"></div>
 
                   <a class="px-2 sm:px-4 py-2 rounded-xl text-sm font-bold transition-all my-download-buttons shadow-md"
-                  href="/CV_Martin_Ohlson_Eng.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in English">EN
+                  href="docs/CV_Martin_Ohlson_Eng.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download my Resume in English">EN
                   </a>
                 </div>
               </div>
@@ -58,11 +58,14 @@
             <!-- Its a meeeeee -->
             <img
               ngSrc="images/picture_of_me.webp" 
-              priority
               width="300" 
               height="375"
-              class="relative rounded-4xl shadow-2xl max-w-[260px] sm:max-w-full object-cover"
-              alt="Picture of Martin Ohlson">
+              priority
+              alt="Picture of Martin Ohlson"
+              (load)="isLoaded.set(true)"
+              class="relative rounded-4xl shadow-2xl max-w-[260px] sm:max-w-full object-cover text-transparent transition-all ease-in-out duration-500"
+              [class.opacity-0] = "!isLoaded()"
+              [class.opacity-100] = "!isLoaded()"/>
           </div>
 
         </div>
