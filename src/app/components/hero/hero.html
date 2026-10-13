@@ -63,9 +63,8 @@
               priority
               alt="Picture of Martin Ohlson"
               (load)="isLoaded.set(true)"
-              class="relative rounded-4xl shadow-2xl max-w-[260px] sm:max-w-full object-cover text-transparent transition-all ease-in-out duration-500"
+              class="relative rounded-4xl shadow-2xl max-w-[260px] sm:max-w-full object-cover text-transparent transition-opacity ease-in-out duration-400"
               [class.opacity-0] = "!isLoaded()"
-              [class.opacity-100] = "!isLoaded()"/>
+              [class.opacity-100] = "isLoaded()"/>
           </div>
-
         </div>
