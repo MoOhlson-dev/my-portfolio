@@ -34,9 +34,9 @@ jobs:
         # The Github Repository name
         run: npx ng build --configuration production --base-href /my-portfolio/
 
-      - name: Copy index.html to 404.html (for SPA Routing)
-        # The Angular Project's name
-        run: cp dist/portfolio-website/browser/index.html dist/portfolio-website/browser/404.html
+      # - name: Copy index.html to 404.html (for SPA Routing)
+      #   # The Angular Project's namef
+      #   run: cp dist/portfolio-website/browser/index.html dist/portfolio-website/browser/404.html
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
